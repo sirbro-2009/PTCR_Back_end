@@ -1,9 +1,9 @@
 import express from "express";
 import "dotenv/config";
 import type { Request ,Response} from "express";
-import User from "../../models/user.ts";
-import Mosque from "../../models/mosque.ts";
-import upload from "../../middleware/multer.ts";
+import User from "../../models/user.js";
+import Mosque from "../../models/mosque.js";
+import upload from "../../middleware/multer.js";
 import bcrypt from "bcrypt";
 import { Document } from 'mongoose'
 const router = express.Router();

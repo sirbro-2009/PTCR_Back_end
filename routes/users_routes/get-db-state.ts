@@ -1,9 +1,9 @@
 import express from "express";
 import "dotenv/config";
 import type { Request, Response } from "express";
-import User from "../../models/user.ts";
-import Mosque from "../../models/mosque.ts";
-import Visit from "../../models/visitors";
+import User from "../../models/user.js";
+import Mosque from "../../models/mosque.js";
+import Visit from "../../models/visitors.js";
 const router = express.Router();
 router.get("/visit", async (req: Request, res: Response) => {
   const check = await Visit.findOne({

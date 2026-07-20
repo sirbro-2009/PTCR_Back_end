@@ -1,14 +1,14 @@
-import Checker from "../../Date/Date";
+import Checker from "../../Date/Date.js";
 import express from "express";
 import "dotenv/config";
 import type { Request, Response } from "express";
-import User from "../../models/user.ts";
-import Mosque from "../../models/mosque.ts";
+import User from "../../models/user.js";
+import Mosque from "../../models/mosque.js";
 import bcrypt from "bcrypt";
 import { Document } from "mongoose";
 import jwt from "jsonwebtoken";
 import crypto from "crypto";
-import sendVerificationEmail from "../../mail.ts";
+import sendVerificationEmail from "../../mail.js";
 const router = express.Router();
 interface result extends Partial<Document> {
   [key: string]: any;

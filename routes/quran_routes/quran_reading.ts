@@ -1,4 +1,4 @@
-import Quran from "../../models/quran";
+import Quran from "../../models/quran.js";
 import express from "express";
 const router = express.Router();
 import type { Request, Response } from "express";

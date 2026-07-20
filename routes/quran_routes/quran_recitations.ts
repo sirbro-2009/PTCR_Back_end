@@ -1,8 +1,8 @@
-import Quran from "../../models/quran";
-import RAN from "../../models/recitations";
-import User from "../../models/user.ts";
-import Mosque from "../../models/mosque.ts";
-import type { result } from "../users_routes/g_u_d_-user-prop.ts";
+import Quran from "../../models/quran.js";
+import RAN from "../../models/recitations.js";
+import User from "../../models/user.js";
+import Mosque from "../../models/mosque.js";
+import type { result } from "../users_routes/g_u_d_-user-prop.js";
 import express from "express";
 const router = express.Router();
 import type { Request, Response } from "express";

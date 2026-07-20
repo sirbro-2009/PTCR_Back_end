@@ -1,8 +1,8 @@
 import express from "express";
 import "dotenv/config";
 import type { Request, Response } from "express";
-import User from "../../models/user.ts";
-import Mosque from "../../models/mosque.ts";
+import User from "../../models/user.js";
+import Mosque from "../../models/mosque.js";
 import bcrypt from "bcrypt";
 import { Document } from "mongoose";
 import jwt from "jsonwebtoken";
