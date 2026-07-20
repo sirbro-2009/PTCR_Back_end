@@ -43,8 +43,8 @@ router.get("/quran_reading", async (req: Request, res: Response) => {
     } else {
       res.status(404).json({ error: false });
     }
-  } catch {
-    
+  } catch(e) {
+    console.log(e)
     res.status(505).json({ error: true });
   }
 });

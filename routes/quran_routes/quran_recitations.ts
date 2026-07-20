@@ -203,8 +203,8 @@ router.get("/get_saved", async (req: Request, res: Response) => {
     } else {
       res.status(404).json({ done, cause: "no_data" });
     }
-  } catch (e){
-    console.log(e)
+  } catch {
+    
     res.status(505).json({ error: true });
   }
 });
