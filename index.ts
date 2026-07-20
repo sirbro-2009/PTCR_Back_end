@@ -25,6 +25,14 @@ mongoose
   .catch((e) => {
     console.log("SOMETHING WRONGE !",e)
   })
+app.get('/',(req,res)=>{
+try{
+res.send('hello')
+}
+catch{
+res.status(505).send('hello')
+}
+})
 /*LOGIN CHECK */
 app.use("/auth", loginRoute);
 /*SIGN UP CHECK */
