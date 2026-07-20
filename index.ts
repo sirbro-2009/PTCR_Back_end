@@ -16,15 +16,6 @@ app.use(express.json());
 app.use(cors());
 const connectString: string = process.env.CONNECTION_STRING as string;
 ///DATA BASE CONNECTION
-mongoose
-  .connect(connectString)
-  .then(() => {
-    console.log("CONNECTED !");
-  })
-  .catch((e) => {
-    console.log("SOMETHING WRONGE !", e);
-  });
-
 let isConnected = false;
 
 async function connectDB() {
