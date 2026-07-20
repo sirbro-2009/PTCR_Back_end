@@ -1,0 +1,1225 @@
+[
+  {
+    "narrative": "Hafs_on_the_authority_of_Asim",
+    "rewaya": {
+      "en": "Hafs on the authority of Asim",
+      "ar": "حفص عن عاصم"
+    },
+    "reciters": [
+      {
+        "id": 1,
+        "reciter": {
+          "ar": "أحمد الحواشي",
+          "en": "Ahmed Al-Hawashi"
+        }
+      },
+      {
+        "id": 2,
+        "reciter": {
+          "ar": "أحمد السويلم",
+          "en": "Ahmed Al-Suwailem"
+        }
+      },
+      {
+        "id": 3,
+        "reciter": {
+          "ar": "أحمد الطرابلسي",
+          "en": "Ahmed Trabelsi"
+        }
+      },
+      {
+        "id": 4,
+        "reciter": {
+          "ar": "أحمد بن علي العجمي",
+          "en": "Ahmed bin Ali Al-Ajmi"
+        }
+      },
+      {
+        "id": 6,
+        "reciter": {
+          "ar": "أحمد خليل شاهين",
+          "en": "Ahmed Khalil Shaheen"
+        }
+      },
+      {
+        "id": 11,
+        "reciter": {
+          "ar": "أحمد ديبان",
+          "en": "Ahmed Diban"
+        }
+      },
+      {
+        "id": 13,
+        "reciter": {
+          "ar": "أحمد صابر",
+          "en": "Ahmed Saber"
+        }
+      },
+      {
+        "id": 14,
+        "reciter": {
+          "ar": "أحمد عامر",
+          "en": "Ahmed Amer"
+        }
+      },
+      {
+        "id": 15,
+        "reciter": {
+          "ar": "أحمد عيسى المعصراوي",
+          "en": "Ahmed Issa Al-Maasrawi"
+        }
+      },
+      {
+        "id": 16,
+        "reciter": {
+          "ar": "أحمد نعينع",
+          "en": "Ahmed Naina"
+        }
+      },
+      {
+        "id": 17,
+        "reciter": {
+          "ar": "أكرم العلاقمي",
+          "en": "Akram Al-Alaqmi"
+        }
+      },
+      {
+        "id": 18,
+        "reciter": {
+          "ar": "إبراهيم الأخضر",
+          "en": "Ibrahim Al-Akhdar"
+        }
+      },
+      {
+        "id": 19,
+        "reciter": {
+          "ar": "إبراهيم الجرمي",
+          "en": "Ibrahim Al-Jarmi"
+        }
+      },
+      {
+        "id": 21,
+        "reciter": {
+          "ar": "إبراهيم الدوسري",
+          "en": "Ibrahim Al-Dosari"
+        }
+      },
+      {
+        "id": 24,
+        "reciter": {
+          "ar": "الزين محمد أحمد",
+          "en": "Al-Zein Muhammad Ahmed"
+        }
+      },
+      {
+        "id": 28,
+        "reciter": {
+          "ar": "بدر التركي",
+          "en": "Badr Al-Turki"
+        }
+      },
+      {
+        "id": 29,
+        "reciter": {
+          "ar": "بندر بليله",
+          "en": "Bandar at night"
+        }
+      },
+      {
+        "id": 30,
+        "reciter": {
+          "ar": "بيشه وا قادر الكردي",
+          "en": "Yes, you can do it"
+        }
+      },
+      {
+        "id": 31,
+        "reciter": {
+          "ar": "توفيق الصايغ",
+          "en": "Tawfiq Al Sayegh"
+        }
+      },
+      {
+        "id": 32,
+        "reciter": {
+          "ar": "جمال شاكر عبدالله",
+          "en": "Jamal Shaker Abdullah"
+        }
+      },
+      {
+        "id": 33,
+        "reciter": {
+          "ar": "جمعان العصيمي",
+          "en": "Juman Al-Osaimi"
+        }
+      },
+      {
+        "id": 34,
+        "reciter": {
+          "ar": "حاتم فريد الواعر",
+          "en": "Hatem Farid Al Waer"
+        }
+      },
+      {
+        "id": 35,
+        "reciter": {
+          "ar": "خالد الجليل",
+          "en": "Khaled Al-Jalil"
+        }
+      },
+      {
+        "id": 36,
+        "reciter": {
+          "ar": "خالد القحطاني",
+          "en": "Khaled Al-Qahtani"
+        }
+      },
+      {
+        "id": 37,
+        "reciter": {
+          "ar": "خالد المهنا",
+          "en": "Khaled Al-Muhanna"
+        }
+      },
+      {
+        "id": 38,
+        "reciter": {
+          "ar": "خالد عبدالكافي",
+          "en": "Khaled Abdel Kafi"
+        }
+      },
+      {
+        "id": 39,
+        "reciter": {
+          "ar": "خالد كريم محمدي",
+          "en": "Khaled Karim Mohammadi"
+        }
+      },
+      {
+        "id": 40,
+        "reciter": {
+          "ar": "خليفة الطنيجي",
+          "en": "Khalifa Al-Taniji"
+        }
+      },
+      {
+        "id": 41,
+        "reciter": {
+          "ar": "رامي الدعيس",
+          "en": "Rami Al-Dais"
+        }
+      },
+      {
+        "id": 43,
+        "reciter": {
+          "ar": "زكي داغستاني",
+          "en": "Zaki Daghestani"
+        }
+      },
+      {
+        "id": 44,
+        "reciter": {
+          "ar": "سعد الغامدي",
+          "en": "Saad Al-Ghamdi"
+        }
+      },
+      {
+        "id": 45,
+        "reciter": {
+          "ar": "سعد المقرن",
+          "en": "Saad Al-Muqrin"
+        }
+      },
+      {
+        "id": 46,
+        "reciter": {
+          "ar": "سعود الشريم",
+          "en": "Saud Al-Shuraim"
+        }
+      },
+      {
+        "id": 47,
+        "reciter": {
+          "ar": "سلمان الصديق",
+          "en": "Salman Al-Siddiq"
+        }
+      },
+      {
+        "id": 48,
+        "reciter": {
+          "ar": "سهل ياسين",
+          "en": "Sahl Yassin"
+        }
+      },
+      {
+        "id": 49,
+        "reciter": {
+          "ar": "سيد أحمد هاشمي",
+          "en": "Syed Ahmed Hashemi"
+        }
+      },
+      {
+        "id": 50,
+        "reciter": {
+          "ar": "سيد رمضان",
+          "en": "Mr. Ramadan"
+        }
+      },
+      {
+        "id": 51,
+        "reciter": {
+          "ar": "شيخ أبو بكر الشاطري",
+          "en": "Sheikh Abu Bakr Al-Shatri"
+        }
+      },
+      {
+        "id": 52,
+        "reciter": {
+          "ar": "شيرزاد عبدالرحمن طاهر",
+          "en": "Shirzad Abdulrahman Taher"
+        }
+      },
+      {
+        "id": 53,
+        "reciter": {
+          "ar": "صابر عبدالحكم",
+          "en": "Saber Abdel Hakam"
+        }
+      },
+      {
+        "id": 54,
+        "reciter": {
+          "ar": "صالح الشمراني",
+          "en": "Saleh Al-Shamrani"
+        }
+      },
+      {
+        "id": 55,
+        "reciter": {
+          "ar": "صالح الهبدان",
+          "en": "Saleh Al Habdan"
+        }
+      },
+      {
+        "id": 56,
+        "reciter": {
+          "ar": "صلاح البدير",
+          "en": "Salah Al-Badir"
+        }
+      },
+      {
+        "id": 57,
+        "reciter": {
+          "ar": "صلاح الهاشم",
+          "en": "Salah Al-Hashem"
+        }
+      },
+      {
+        "id": 58,
+        "reciter": {
+          "ar": "صلاح بو خاطر",
+          "en": "Salah Bou Khater"
+        }
+      },
+      {
+        "id": 60,
+        "reciter": {
+          "ar": "عادل الكلباني",
+          "en": "Adel Al-Kalbani"
+        }
+      },
+      {
+        "id": 61,
+        "reciter": {
+          "ar": "عادل ريان",
+          "en": "Adel Rayan"
+        }
+      },
+      {
+        "id": 62,
+        "reciter": {
+          "ar": "عبدالإله بن عون",
+          "en": "Abdul-Ilah bin Aoun"
+        }
+      },
+      {
+        "id": 63,
+        "reciter": {
+          "ar": "عبدالبارئ الثبيتي",
+          "en": "Abdul Bara Al-Thubaiti"
+        }
+      },
+      {
+        "id": 64,
+        "reciter": {
+          "ar": "عبدالبارئ محمد",
+          "en": "Abdul Bare Muhammad"
+        }
+      },
+      {
+        "id": 65,
+        "reciter": {
+          "ar": "عبدالباسط عبدالصمد ",
+          "en": "Abdel Basset Abdel Samad"
+        }
+      },
+      {
+        "id": 66,
+        "reciter": {
+          "ar": "عبدالباسط عبدالصمد ",
+          "en": "Abdel Basset Abdel Samad"
+        }
+      },
+      {
+        "id": 68,
+        "reciter": {
+          "ar": "عبدالرحمن السديس",
+          "en": "Abdul Rahman Al-Sudais"
+        }
+      },
+      {
+        "id": 69,
+        "reciter": {
+          "ar": "عبدالرحمن العوسي",
+          "en": "Abdul Rahman Al-Awsi"
+        }
+      },
+      {
+        "id": 70,
+        "reciter": {
+          "ar": "عبدالرحمن الماجد",
+          "en": "Abdul Rahman Al Majid"
+        }
+      },
+      {
+        "id": 71,
+        "reciter": {
+          "ar": "عبدالرشيد صوفي",
+          "en": "Abdul Rashid Sufi"
+        }
+      },
+      {
+        "id": 74,
+        "reciter": {
+          "ar": "عبدالعزيز الأحمد",
+          "en": "Abdulaziz Al-Ahmad"
+        }
+      },
+      {
+        "id": 75,
+        "reciter": {
+          "ar": "عبدالعزيز الزهراني",
+          "en": "Abdulaziz Al-Zahrani"
+        }
+      },
+      {
+        "id": 76,
+        "reciter": {
+          "ar": "عبدالله الخلف",
+          "en": "Abdullah Al-Khalaf"
+        }
+      },
+      {
+        "id": 77,
+        "reciter": {
+          "ar": "عبدالله الكندري",
+          "en": "Abdullah Al-Kandari"
+        }
+      },
+      {
+        "id": 78,
+        "reciter": {
+          "ar": "عبدالله المطرود",
+          "en": "Abdullah Al-Matroud"
+        }
+      },
+      {
+        "id": 79,
+        "reciter": {
+          "ar": "عبدالله بصفر",
+          "en": "Abdullah Basfar"
+        }
+      },
+      {
+        "id": 80,
+        "reciter": {
+          "ar": "عبدالله خياط",
+          "en": "Abdullah Khayyat"
+        }
+      },
+      {
+        "id": 81,
+        "reciter": {
+          "ar": "عبدالله عبدل",
+          "en": "Abdullah Abdul"
+        }
+      },
+      {
+        "id": 82,
+        "reciter": {
+          "ar": "عبدالله عواد الجهني",
+          "en": "Abdullah Awad Al-Juhani"
+        }
+      },
+      {
+        "id": 83,
+        "reciter": {
+          "ar": "عبدالله غيلان",
+          "en": "Abdullah Ghailan"
+        }
+      },
+      {
+        "id": 84,
+        "reciter": {
+          "ar": "عبدالله كامل",
+          "en": "Abdullah Kamel"
+        }
+      },
+      {
+        "id": 85,
+        "reciter": {
+          "ar": "عبدالمحسن الحارثي",
+          "en": "Abdul Mohsen Al Harithi"
+        }
+      },
+      {
+        "id": 86,
+        "reciter": {
+          "ar": "عبدالمحسن العبيكان",
+          "en": "Abdul Mohsen Al-Obaikan"
+        }
+      },
+      {
+        "id": 87,
+        "reciter": {
+          "ar": "عبدالمحسن القاسم",
+          "en": "Abdul Mohsen Al-Qasim"
+        }
+      },
+      {
+        "id": 88,
+        "reciter": {
+          "ar": "عبدالهادي أحمد كناكري",
+          "en": "Abdul Hadi Ahmed Kanakry"
+        }
+      },
+      {
+        "id": 89,
+        "reciter": {
+          "ar": "عبدالودود حنيف",
+          "en": "Abdul Wadud Hanif"
+        }
+      },
+      {
+        "id": 90,
+        "reciter": {
+          "ar": "علي الحذيفي",
+          "en": "Ali Al-Hudhayfi"
+        }
+      },
+      {
+        "id": 92,
+        "reciter": {
+          "ar": "علي جابر",
+          "en": "Ali Jaber"
+        }
+      },
+      {
+        "id": 93,
+        "reciter": {
+          "ar": "علي حجاج السويسي",
+          "en": "Ali Hajjaj Al-Suwaisi"
+        }
+      },
+      {
+        "id": 94,
+        "reciter": {
+          "ar": "عماد زهير حافظ",
+          "en": "Imad Zuhair Hafez"
+        }
+      },
+      {
+        "id": 96,
+        "reciter": {
+          "ar": "فؤاد الخامري",
+          "en": "Fouad Al-Khamiri"
+        }
+      },
+      {
+        "id": 97,
+        "reciter": {
+          "ar": "فارس عباد",
+          "en": "Fares Abbad"
+        }
+      },
+      {
+        "id": 98,
+        "reciter": {
+          "ar": "ماجد الزامل",
+          "en": "Majed Al-Zamil"
+        }
+      },
+      {
+        "id": 99,
+        "reciter": {
+          "ar": "مال الله عبدالرحمن الجابر",
+          "en": "Mal Allah Abdul Rahman Al Jaber"
+        }
+      },
+      {
+        "id": 100,
+        "reciter": {
+          "ar": "ماهر المعيقلي",
+          "en": "Maher Al-Muaiqly"
+        }
+      },
+      {
+        "id": 101,
+        "reciter": {
+          "ar": "ماهر المعيقلي",
+          "en": "Maher Al-Muaiqly"
+        }
+      },
+      {
+        "id": 102,
+        "reciter": {
+          "ar": "ماهر شخاشيرو",
+          "en": "Maher Shakhashero"
+        }
+      },
+      {
+        "id": 104,
+        "reciter": {
+          "ar": "محمد أيوب",
+          "en": "Muhammad Ayoub"
+        }
+      },
+      {
+        "id": 106,
+        "reciter": {
+          "ar": "محمد الطبلاوي",
+          "en": "Muhammad Al-Tablawi"
+        }
+      },
+      {
+        "id": 107,
+        "reciter": {
+          "ar": "محمد اللحيدان",
+          "en": "Muhammad Al-Luhaidan"
+        }
+      },
+      {
+        "id": 108,
+        "reciter": {
+          "ar": "محمد جبريل",
+          "en": "Muhammad Jibril"
+        }
+      },
+      {
+        "id": 109,
+        "reciter": {
+          "ar": "محمد رشاد الشريف",
+          "en": "Muhammad Rashad Al-Sharif"
+        }
+      },
+      {
+        "id": 111,
+        "reciter": {
+          "ar": "محمد صالح عالم شاه",
+          "en": "Muhammad Saleh Alam Shah"
+        }
+      },
+      {
+        "id": 112,
+        "reciter": {
+          "ar": "محمد صديق المنشاوي",
+          "en": "Muhammad Siddiq Al-Minshawi"
+        }
+      },
+      {
+        "id": 113,
+        "reciter": {
+          "ar": "محمد صديق المنشاوي",
+          "en": "Muhammad Siddiq Al-Minshawi"
+        }
+      },
+      {
+        "id": 114,
+        "reciter": {
+          "ar": "محمد صديق المنشاوي",
+          "en": "Muhammad Siddiq Al-Minshawi"
+        }
+      },
+      {
+        "id": 118,
+        "reciter": {
+          "ar": "محمد عبدالكريم",
+          "en": "Muhammad Abdel Karim"
+        }
+      },
+      {
+        "id": 119,
+        "reciter": {
+          "ar": "محمد عثمان خان ( من الهند )",
+          "en": "Muhammad Usman Khan (from India)"
+        }
+      },
+      {
+        "id": 120,
+        "reciter": {
+          "ar": "محمود الرفاعي",
+          "en": "Mahmoud Al-Rifai"
+        }
+      },
+      {
+        "id": 122,
+        "reciter": {
+          "ar": "محمود خليل الحصري",
+          "en": "Mahmoud Khalil Al-Hosary"
+        }
+      },
+      {
+        "id": 126,
+        "reciter": {
+          "ar": "محمود خليل الحصري",
+          "en": "Mahmoud Khalil Al-Hosary"
+        }
+      },
+      {
+        "id": 127,
+        "reciter": {
+          "ar": "محمود عبدالحكم",
+          "en": "Mahmoud Abdel Hakam"
+        }
+      },
+      {
+        "id": 128,
+        "reciter": {
+          "ar": "محمود علي البنا",
+          "en": "Mahmoud Ali Al-Banna"
+        }
+      },
+      {
+        "id": 129,
+        "reciter": {
+          "ar": "محمود علي البنا",
+          "en": "Mahmoud Ali Al-Banna"
+        }
+      },
+      {
+        "id": 131,
+        "reciter": {
+          "ar": "مشاري العفاسي",
+          "en": "Mishary Al-Afasy"
+        }
+      },
+      {
+        "id": 132,
+        "reciter": {
+          "ar": "مصطفى إسماعيل",
+          "en": "Mustafa Ismail"
+        }
+      },
+      {
+        "id": 133,
+        "reciter": {
+          "ar": "مصطفى إسماعيل",
+          "en": "Mustafa Ismail"
+        }
+      },
+      {
+        "id": 134,
+        "reciter": {
+          "ar": "مصطفى اللاهوني",
+          "en": "Mustafa Al-Lahouni"
+        }
+      },
+      {
+        "id": 135,
+        "reciter": {
+          "ar": "مصطفى رعد العزاوي",
+          "en": "Mustafa Raad Al-Azzawi"
+        }
+      },
+      {
+        "id": 136,
+        "reciter": {
+          "ar": "معيض الحارثي",
+          "en": "Moeed Al-Harthy"
+        }
+      },
+      {
+        "id": 140,
+        "reciter": {
+          "ar": "مفتاح السلطني",
+          "en": "Saltani Key"
+        }
+      },
+      {
+        "id": 141,
+        "reciter": {
+          "ar": "موسى بلال",
+          "en": "Musa Bilal"
+        }
+      },
+      {
+        "id": 142,
+        "reciter": {
+          "ar": "ناصر القطامي",
+          "en": "Nasser Al-Qatami"
+        }
+      },
+      {
+        "id": 143,
+        "reciter": {
+          "ar": "ناصر الماجد",
+          "en": "Nasser Al Majid"
+        }
+      },
+      {
+        "id": 144,
+        "reciter": {
+          "ar": "نبيل الرفاعي",
+          "en": "Nabil Al-Rifai"
+        }
+      },
+      {
+        "id": 145,
+        "reciter": {
+          "ar": "نذير المالكي",
+          "en": "Nazir Al-Maliki"
+        }
+      },
+      {
+        "id": 146,
+        "reciter": {
+          "ar": "نعمة الحسان",
+          "en": "The blessing of kindness"
+        }
+      },
+      {
+        "id": 148,
+        "reciter": {
+          "ar": "هاشم أبو دلال",
+          "en": "Hashem Abu Dalal"
+        }
+      },
+      {
+        "id": 149,
+        "reciter": {
+          "ar": "هاني الرفاعي",
+          "en": "Hani Al-Rifai"
+        }
+      },
+      {
+        "id": 150,
+        "reciter": {
+          "ar": "وديع اليمني",
+          "en": "Wadih Al-Yamani"
+        }
+      },
+      {
+        "id": 152,
+        "reciter": {
+          "ar": "ياسر الدوسري",
+          "en": "Yasser Al-Dosari"
+        }
+      },
+      {
+        "id": 153,
+        "reciter": {
+          "ar": "ياسر القرشي",
+          "en": "Yasser Al Qurashi"
+        }
+      },
+      {
+        "id": 155,
+        "reciter": {
+          "ar": "ياسر سلامة",
+          "en": "Yasser Salama"
+        }
+      },
+      {
+        "id": 156,
+        "reciter": {
+          "ar": "يحيى حوا",
+          "en": "Yahya Hawa"
+        }
+      },
+      {
+        "id": 157,
+        "reciter": {
+          "ar": "يوسف الشويعي",
+          "en": "Youssef Al-Shuwaii"
+        }
+      },
+      {
+        "id": 158,
+        "reciter": {
+          "ar": "يوسف بن نوح أحمد",
+          "en": "Youssef bin Noah Ahmed"
+        }
+      }
+    ]
+  },
+  {
+    "narrative": "They_said_about_Nafi",
+    "rewaya": {
+      "en": "They said about Nafi’",
+      "ar": "قالون عن نافع"
+    },
+    "reciters": [
+      {
+        "id": 5,
+        "reciter": {
+          "ar": "أحمد خضر الطرابلسي",
+          "en": "Ahmed Khader Trabelsi"
+        }
+      },
+      {
+        "id": 9,
+        "reciter": {
+          "ar": "أحمد ديبان",
+          "en": "Ahmed Diban"
+        }
+      },
+      {
+        "id": 22,
+        "reciter": {
+          "ar": "إبراهيم كشيدان",
+          "en": "Ibrahim Kashidan"
+        }
+      },
+      {
+        "id": 23,
+        "reciter": {
+          "ar": "الدوكالي محمد العالم",
+          "en": "Doukali Muhammad Al-Alam"
+        }
+      },
+      {
+        "id": 59,
+        "reciter": {
+          "ar": "طارق عبدالغني دعوب",
+          "en": "Tariq Abdul Ghani Daoub"
+        }
+      },
+      {
+        "id": 91,
+        "reciter": {
+          "ar": "علي الحذيفي",
+          "en": "Ali Al-Hudhayfi"
+        }
+      },
+      {
+        "id": 103,
+        "reciter": {
+          "ar": "محمد أبوسنينة",
+          "en": "Muhammad Abu Sneina"
+        }
+      },
+      {
+        "id": 105,
+        "reciter": {
+          "ar": "محمد الأمين قنيوة",
+          "en": "Muhammad Al-Amin Qenwa"
+        }
+      },
+      {
+        "id": 123,
+        "reciter": {
+          "ar": "محمود خليل الحصري",
+          "en": "Mahmoud Khalil Al-Hosary"
+        }
+      },
+      {
+        "id": 130,
+        "reciter": {
+          "ar": "مروان العكري",
+          "en": "Marwan Al-Ekry"
+        }
+      },
+      {
+        "id": 151,
+        "reciter": {
+          "ar": "وليد النائحي",
+          "en": "Walid Al-Nahi"
+        }
+      }
+    ]
+  },
+  {
+    "narrative": "Shu_bah_about_Asim",
+    "rewaya": {
+      "en": "Shu'bah about Asim",
+      "ar": "شعبة عن عاصم"
+    },
+    "reciters": [
+      {
+        "id": 7,
+        "reciter": {
+          "ar": "أحمد ديبان",
+          "en": "Ahmed Diban"
+        }
+      }
+    ]
+  },
+  {
+    "narrative": "Al_Bazi_on_the_authority_of_Ibn_Kathir",
+    "rewaya": {
+      "en": "Al-Bazi on the authority of Ibn Kathir",
+      "ar": "البزي عن ابن كثير"
+    },
+    "reciters": [
+      {
+        "id": 8,
+        "reciter": {
+          "ar": "أحمد ديبان",
+          "en": "Ahmed Diban"
+        }
+      }
+    ]
+  },
+  {
+    "narrative": "Qunbil_on_the_authority_of_Ibn_Kathir",
+    "rewaya": {
+      "en": "Qunbil on the authority of Ibn Kathir",
+      "ar": "قنبل عن ابن كثير"
+    },
+    "reciters": [
+      {
+        "id": 10,
+        "reciter": {
+          "ar": "أحمد ديبان",
+          "en": "Ahmed Diban"
+        }
+      }
+    ]
+  },
+  {
+    "narrative": "Al_Duri_on_the_authority_of_Abu_Amr",
+    "rewaya": {
+      "en": "Al-Duri on the authority of Abu Amr",
+      "ar": "الدوري عن أبي عمرو"
+    },
+    "reciters": [
+      {
+        "id": 12,
+        "reciter": {
+          "ar": "أحمد ديبان",
+          "en": "Ahmed Diban"
+        }
+      },
+      {
+        "id": 26,
+        "reciter": {
+          "ar": "الفاتح محمد الزبير",
+          "en": "Al-Fatih Muhammad Al-Zubair"
+        }
+      },
+      {
+        "id": 124,
+        "reciter": {
+          "ar": "محمود خليل الحصري",
+          "en": "Mahmoud Khalil Al-Hosary"
+        }
+      },
+      {
+        "id": 139,
+        "reciter": {
+          "ar": "مفتاح السلطني",
+          "en": "Saltani Key"
+        }
+      },
+      {
+        "id": 147,
+        "reciter": {
+          "ar": "نورين محمد صديق",
+          "en": "Noreen Muhammad Siddiq"
+        }
+      }
+    ]
+  },
+  {
+    "narrative": "Warsh_on_the_authority_of_Nafi",
+    "rewaya": {
+      "en": "Warsh on the authority of Nafi’",
+      "ar": "ورش عن نافع"
+    },
+    "reciters": [
+      {
+        "id": 20,
+        "reciter": {
+          "ar": "إبراهيم الدوسري",
+          "en": "Ibrahim Al-Dosari"
+        }
+      },
+      {
+        "id": 25,
+        "reciter": {
+          "ar": "العيون الكوشي",
+          "en": "Kushite eyes"
+        }
+      },
+      {
+        "id": 27,
+        "reciter": {
+          "ar": "القارئ ياسين",
+          "en": "Reader Yassin"
+        }
+      },
+      {
+        "id": 42,
+        "reciter": {
+          "ar": "رشيد بلعالية",
+          "en": "Rachid Belalia"
+        }
+      },
+      {
+        "id": 67,
+        "reciter": {
+          "ar": "عبدالباسط عبدالصمد ",
+          "en": "Abdel Basset Abdel Samad"
+        }
+      },
+      {
+        "id": 95,
+        "reciter": {
+          "ar": "عمر القزابري",
+          "en": "Omar Al-Qazbari"
+        }
+      },
+      {
+        "id": 110,
+        "reciter": {
+          "ar": "محمد سايد",
+          "en": "Mohamed Sayed"
+        }
+      },
+      {
+        "id": 117,
+        "reciter": {
+          "ar": "محمد عبدالكريم",
+          "en": "Muhammad Abdel Karim"
+        }
+      },
+      {
+        "id": 125,
+        "reciter": {
+          "ar": "محمود خليل الحصري",
+          "en": "Mahmoud Khalil Al-Hosary"
+        }
+      }
+    ]
+  },
+  {
+    "narrative": "Khalaf_on_the_authority_of_Hamza",
+    "rewaya": {
+      "en": "Khalaf on the authority of Hamza",
+      "ar": "خلف عن حمزة"
+    },
+    "reciters": [
+      {
+        "id": 72,
+        "reciter": {
+          "ar": "عبدالرشيد صوفي",
+          "en": "Abdul Rashid Sufi"
+        }
+      }
+    ]
+  },
+  {
+    "narrative": "Al_Susi_on_the_authority_of_Abu_Amr",
+    "rewaya": {
+      "en": "Al-Susi on the authority of Abu Amr",
+      "ar": "السوسي عن أبي عمرو"
+    },
+    "reciters": [
+      {
+        "id": 73,
+        "reciter": {
+          "ar": "عبدالرشيد صوفي",
+          "en": "Abdul Rashid Sufi"
+        }
+      }
+    ]
+  },
+  {
+    "narrative": "Al_Bazi_and_Qunbul_on_the_authority_of_Ibn_Kathir",
+    "rewaya": {
+      "en": "Al-Bazi and Qunbul on the authority of Ibn Kathir",
+      "ar": "البزي وقنبل عن ابن كثير"
+    },
+    "reciters": [
+      {
+        "id": 115,
+        "reciter": {
+          "ar": "محمد عبدالحكيم العبدالله",
+          "en": "Muhammad Abdul Hakim Al Abdullah"
+        }
+      }
+    ]
+  },
+  {
+    "narrative": "Al_Douri_from_Al_Kisa_i",
+    "rewaya": {
+      "en": "Al-Douri from Al-Kisa’i",
+      "ar": "الدوري عن الكسائي"
+    },
+    "reciters": [
+      {
+        "id": 116,
+        "reciter": {
+          "ar": "محمد عبدالحكيم العبدالله",
+          "en": "Muhammad Abdul Hakim Al Abdullah"
+        }
+      },
+      {
+        "id": 121,
+        "reciter": {
+          "ar": "محمود الشيمي",
+          "en": "Mahmoud Al-Shimi"
+        }
+      },
+      {
+        "id": 137,
+        "reciter": {
+          "ar": "مفتاح السلطني",
+          "en": "Saltani Key"
+        }
+      }
+    ]
+  },
+  {
+    "narrative": "Ibn_Dhakwan_on_the_authority_of_Ibn_Amer",
+    "rewaya": {
+      "en": "Ibn Dhakwan, on the authority of Ibn Amer",
+      "ar": "ابن ذكوان عن ابن عامر"
+    },
+    "reciters": [
+      {
+        "id": 138,
+        "reciter": {
+          "ar": "مفتاح السلطني",
+          "en": "Saltani Key"
+        }
+      }
+    ]
+  },
+  {
+    "narrative": "My_novel_Royce_and_Soul",
+    "rewaya": {
+      "en": "My novel Royce and Soul",
+      "ar": "روايتي رويس وروح"
+    },
+    "reciters": [
+      {
+        "id": 154,
+        "reciter": {
+          "ar": "ياسر المزروعي ",
+          "en": "Yasser Al Mazroui"
+        }
+      }
+    ]
+  }
+]
