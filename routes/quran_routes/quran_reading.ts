@@ -44,7 +44,7 @@ router.get("/quran_reading", async (req: Request, res: Response) => {
           }
           const tadjwid = versesArray?.map(async(e,i)=>{
             const tajwidArray = await QpcWord.find({surah:number,ayah:e.number})
-            return tajwidArray.map((e,i)=>e.text).join("")
+            return tajwidArray
           })
           
           res.json({ name, number, revelation_place, verses_count,verses:versesArray,tadjwid })
