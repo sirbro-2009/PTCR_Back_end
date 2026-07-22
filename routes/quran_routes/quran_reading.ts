@@ -15,11 +15,11 @@ interface Ires extends Partial<Document> {
     en: string;
   };
   verses_count?: number;
+  tadjwid?:string[],
   verses?: {
     number: number;
     text: { ar: string; en: string };
     juz: number;
-    tadjwid:string,
     page: number;
     sajda: boolean;
   }[];
@@ -42,12 +42,12 @@ router.get("/quran_reading", async (req: Request, res: Response) => {
           }) 
 
           }
-          const versesArrayWithtajwid = versesArray?.map(async(e,i)=>{
+          const tadjwid = versesArray?.map(async(e,i)=>{
             const tajwidArray = await QpcWord.find({surah:number,ayah:e.number})
-            return {...versesArray,tadjwid:tajwidArray.map((e,i)=>e.text).join("")}
+            return tajwidArray.map((e,i)=>e.text).join("")
           })
           
-          res.json({ name, number, revelation_place, verses_count,verses:versesArrayWithtajwid })
+          res.json({ name, number, revelation_place, verses_count,verses:versesArray,tadjwid })
       }
     } else {
       res.status(404).json({ error: true });
