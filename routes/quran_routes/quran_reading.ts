@@ -50,6 +50,7 @@ router.get("/quran_reading", async (req: Request, res: Response) => {
             surah: number?.toString(),
             ayah: e.number.toString(),
           });
+          console.log(tajwidArray)
           return tajwidArray
         });
 
