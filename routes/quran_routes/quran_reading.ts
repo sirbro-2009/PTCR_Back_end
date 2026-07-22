@@ -15,7 +15,7 @@ interface Ires extends Partial<Document> {
     en: string;
   };
   verses_count?: number;
-  tadjwid?:any,
+  tadjwid?:string[],
   verses?: {
     number: number;
     text: { ar: string; en: string };
@@ -44,7 +44,7 @@ router.get("/quran_reading", async (req: Request, res: Response) => {
           }
           const tadjwid = versesArray?.map(async(e,i)=>{
             const tajwidArray = await QpcWord.find({surah:number,ayah:e.number})
-            return tajwidArray
+            return tajwidArray.map((e,i)=>e.text).join("")
           })
           
           res.json({ name, number, revelation_place, verses_count,verses:versesArray,tadjwid })
