@@ -15,7 +15,7 @@ interface Ires extends Partial<Document> {
     en: string;
   };
   verses_count?: number;
-  tadjwid?: string[];
+  tadjwid?: any;
   verses?: {
     number: number;
     text: { ar: string; en: string };
@@ -51,10 +51,6 @@ router.get("/quran_reading", async (req: Request, res: Response) => {
             ayah: e.number.toString(),
           });
           return tajwidArray
-            .map((e, i) => {
-              return e.text;
-            })
-            .join("");
         });
 
         res.json({
