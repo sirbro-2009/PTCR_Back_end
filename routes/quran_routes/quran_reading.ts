@@ -1,4 +1,5 @@
 import Quran from "../../models/quran.js";
+import QpcWord from "../../models/QpcWord.js";
 import express from "express";
 const router = express.Router();
 import type { Request, Response } from "express";
@@ -18,6 +19,7 @@ interface Ires extends Partial<Document> {
     number: number;
     text: { ar: string; en: string };
     juz: number;
+    tadjwid:string,
     page: number;
     sajda: boolean;
   }[];
@@ -33,15 +35,22 @@ router.get("/quran_reading", async (req: Request, res: Response) => {
         const { name, number, revelation_place, verses_count, verses } =
           response as unknown as Ires;
           let versesArray = verses
+          
           if(typeof aya === "string" && aya !== "undefined" && Number(aya)>0 && Number(aya)<=verses_count! ){
           versesArray = verses!.filter((e,i)=>{
             return i === (Number(aya as string)-1)
           }) 
+
           }
-          res.json({ name, number, revelation_place, verses_count,verses: versesArray })
+          const versesArrayWithtajwid = versesArray?.map(async(e,i)=>{
+            const tajwidArray = await QpcWord.find({surah:number,ayah:e.number})
+            return {...versesArray,tadjwid:tajwidArray.map((e,i)=>e.text).join("")}
+          })
+          
+          res.json({ name, number, revelation_place, verses_count,verses:versesArrayWithtajwid })
       }
     } else {
-      res.status(404).json({ error: false });
+      res.status(404).json({ error: true });
     }
   } catch(e) {
     console.log(e)
