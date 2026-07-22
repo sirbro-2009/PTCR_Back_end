@@ -15,7 +15,7 @@ interface Ires extends Partial<Document> {
     en: string;
   };
   verses_count?: number;
-  tadjwid?:string[],
+  tadjwid?: string[];
   verses?: {
     number: number;
     text: { ar: string; en: string };
@@ -26,34 +26,51 @@ interface Ires extends Partial<Document> {
 }
 router.get("/quran_reading", async (req: Request, res: Response) => {
   try {
-    const { surahIndex,aya } = req.query;
+    const { surahIndex, aya } = req.query;
     const editedIndex = Number(surahIndex as string);
     if (editedIndex && editedIndex >= 0 && editedIndex <= 114) {
       const response = await Quran.findOne({ number: editedIndex }).lean();
       if (response) {
-        
         const { name, number, revelation_place, verses_count, verses } =
           response as unknown as Ires;
-          let versesArray = verses
-          
-          if(typeof aya === "string" && aya !== "undefined" && Number(aya)>0 && Number(aya)<=verses_count! ){
-          versesArray = verses!.filter((e,i)=>{
-            return i === (Number(aya as string)-1)
-          }) 
+        let versesArray = verses;
 
-          }
-          const tadjwid = versesArray?.map(async(e,i)=>{
-            const tajwidArray = await QpcWord.find({surah:number,ayah:e.number})
-            return tajwidArray.map((e,i)=>e.text).join("")
-          })
-          
-          res.json({ name, number, revelation_place, verses_count,verses:versesArray,tadjwid })
+        if (
+          typeof aya === "string" &&
+          aya !== "undefined" &&
+          Number(aya) > 0 &&
+          Number(aya) <= verses_count!
+        ) {
+          versesArray = verses!.filter((e, i) => {
+            return i === Number(aya as string) - 1;
+          });
+        }
+        const tadjwid = versesArray?.map(async (e, i) => {
+          const tajwidArray = await QpcWord.find({
+            surah: number,
+            ayah: e.number,
+          });
+          return tajwidArray
+            .map((e, i) => {
+              return e.text;
+            })
+            .join("");
+        });
+
+        res.json({
+          name,
+          number,
+          revelation_place,
+          verses_count,
+          verses: versesArray,
+          tadjwid,
+        });
       }
     } else {
       res.status(404).json({ error: true });
     }
-  } catch(e) {
-    console.log(e)
+  } catch (e) {
+    console.log(e);
     res.status(505).json({ error: true });
   }
 });
