@@ -45,14 +45,17 @@ router.get("/quran_reading", async (req: Request, res: Response) => {
             return i === Number(aya as string) - 1;
           });
         }
-        const tadjwid = versesArray?.map(async (e, i) => {
-          const tajwidArray = await QpcWord.find({
-            surah: number?.toString(),
-            ayah: e.number.toString(),
-          });
-          console.log(tajwidArray)
-          return tajwidArray
-        });
+        const tadjwid = versesArray
+          ? await Promise.all(
+              versesArray.map(async (e) => {
+                const tajwidArray = await QpcWord.find({
+                  surah: number?.toString(),
+                  ayah: e.number.toString(),
+                }).lean();
+                return tajwidArray;
+              }),
+            )
+          : [];
 
         res.json({
           name,
