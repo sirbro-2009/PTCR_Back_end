@@ -15,7 +15,7 @@ interface Ires extends Partial<Document> {
     en: string;
   };
   verses_count?: number;
-  tadjwid?: any;
+  tadjwid?:  string[];
   verses?: {
     number: number;
     text: { ar: string; en: string };
