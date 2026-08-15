@@ -1,7 +1,6 @@
 import express from "express";
 const router = express.Router();
 import type { Request, Response } from "express";
-import { Document } from "mongoose";
 import User from "../../models/user.js";
 import Mosque from "../../models/mosque.js";
 ///
