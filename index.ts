@@ -12,6 +12,9 @@ import signUpRoute from "./routes/users_routes/sign_ip.js";
 import quranRections from "./routes/quran_routes/quran_recitations.js";
 import quranReading from "./routes/quran_routes/quran_reading.js";
 import tafsir from "./routes/quran_routes/quran_tafsir.js";
+/*Adkar */
+import Adkar from "./routes/adkar_routes/adkar_setting.js";
+
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -62,6 +65,9 @@ app.use("/user", user_props);
 app.use("/quran", quranRections);
 app.use("/quran", quranReading);
 app.use("/quran", tafsir);
+/*Adkar route */
+app.use("/adkar", Adkar);
+
 if (process.env.NODE_ENV !== "production") {
   const port = process.env.PORT || 3000;
   app.listen(port, () => console.log(`Example app listening on port ${port}!`));

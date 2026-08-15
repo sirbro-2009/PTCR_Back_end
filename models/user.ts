@@ -12,6 +12,10 @@ const userSchema =  new Schema ({
   dateOfborn:String,
   isVerified:Boolean,
   SavedQuran:[{surah:Number,reader:Number}],
+  notification:{
+    isActivated:Boolean,
+    alaramArray:[{time:String,id:Number}]
+  },
   verifyCode:{
         Number:Number,
         exp:Number

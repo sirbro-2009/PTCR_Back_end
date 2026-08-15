@@ -10,6 +10,10 @@ const Mosque = new Schema({
   Token: [{ token: String }],
   Gender: String,
   dateOfborn: String,
+  notification:{
+    isActivated:Boolean,
+    alaramArray:[{time:String,id:Number}]
+  },
   MosqueProps: {
     City: String,
     Country: String,

@@ -18,7 +18,8 @@ export interface result extends Partial<Document>{
     Gender:string,
     SavedQuran?:{surah:Number,reader:Number}[],
     dateOfborn:string,
-    password?:string
+    password?:string,
+
     Token?: { token?: string }[]
 }
 router.get("/get-infromations", async (req: Request, res:Response) => {
