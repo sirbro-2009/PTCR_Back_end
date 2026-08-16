@@ -28,10 +28,10 @@ router.put("/set-active",async(req:Request,res:Response)=>{
 
     if (!type) return res.status(404).json({error:"user not found"});
     try{
-        const new_value = !type.notification?.isActivated;
+        const {value} = req.body as {value:boolean}
         if (!type.notification) return null
         
-        type.notification.isActivated = new_value;
+        type.notification.isActivated = value;
         await type.save()
         res.json(type.notification);
     }
