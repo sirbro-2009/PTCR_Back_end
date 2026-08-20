@@ -72,7 +72,7 @@ router.get("/quran_reading", async (req: Request, res: Response) => {
     }
   } catch (e) {
     console.log(e);
-    res.status(505).json({ error: true });
+    res.status(500).json({ error: true });
   }
 });
 export default router;

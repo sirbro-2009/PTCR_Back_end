@@ -48,7 +48,7 @@ app.get("/", (req, res) => {
   try {
     res.send("hello");
   } catch {
-    res.status(505).send("hello");
+    res.status(500).send("hello");
   }
 });
 /*LOGIN CHECK */

@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 const Mosque = new Schema({
   email: String,
@@ -10,9 +10,16 @@ const Mosque = new Schema({
   Token: [{ token: String }],
   Gender: String,
   dateOfborn: String,
-  notification:{
-    isActivated:Boolean,
-    alaramArray:[{time:String,id:Number}]
+  notification: {
+    isActivated: Boolean,
+    alaramArray: [{ time: String, id: Number }],
+    subscription: {
+      userId: String,
+      endpoint: String,
+      p256dh: String,
+      auth: String,
+      timeZone: String,
+    },
   },
   MosqueProps: {
     City: String,
@@ -29,12 +36,12 @@ const Mosque = new Schema({
       isha: String,
     },
   },
-  SavedQuran:[{surah:Number,reader:Number}],
-  isVerified:Boolean,
-  verifyCode:{
-        Number:Number,
-        exp:Number
-      } 
+  SavedQuran: [{ surah: Number, reader: Number }],
+  isVerified: Boolean,
+  verifyCode: {
+    Number: Number,
+    exp: Number,
+  },
 });
 const mosque = mongoose.model("mosque", Mosque);
 export default mosque;

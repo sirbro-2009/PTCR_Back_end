@@ -3,6 +3,8 @@ const router = express.Router();
 import type { Request, Response } from "express";
 import User from "../../models/user.js";
 import Mosque from "../../models/mosque.js";
+import jwt from 'jsonwebtoken';
+
 ///
 async function getUserObject(token:string|undefined,res:Response){
     
@@ -19,24 +21,31 @@ router.get("/get-adkar-data",async(req:Request,res:Response)=>{
         res.json(type?.notification)
     }
     catch{
-        res.status(505).json({error:"some thing wrong in the server"})
+        res.status(500).json({error:"some thing wrong in the server"})
     }
 })
 ///put active value
 router.put("/set-active",async(req:Request,res:Response)=>{
-    const type = (await getUserObject(req.headers.authorization?.split(" ")[1],res)).type
+    const token = req.headers.authorization?.split(" ")[1]
+    const type = (await getUserObject(token,res)).type
 
-    if (!type) return res.status(404).json({error:"user not found"});
+    if (!type ) return res.status(404).json({error:"user not found"});
     try{
-        const {value} = req.body as {value:boolean}
-        if (!type.notification) return null
+        const {active,subscription} = req.body as {active:boolean,subscription?:any}
+        if (!type.notification || typeof token !== 'string') return null
         
-        type.notification.isActivated = value;
+        type.notification.isActivated = active;
+        type.notification.subscription =  subscription
+        if (type.notification.subscription) {
+            const decoded = jwt.decode(token);
+            type.notification.subscription.userId =
+                typeof decoded === "string" ? decoded : decoded?.sub ?? null;
+        }
         await type.save()
         res.json(type.notification);
     }
     catch{
-        res.status(505).json({error:"some thing wrong in the server"})
+        res.status(500).json({error:"some thing wrong in the server"})
     }     
 })
 ///post new alarm 
@@ -50,7 +59,7 @@ router.post("/add-alarm",async(req:Request,res:Response)=>{
         res.json(type?.notification);
     }
     catch{
-        res.status(505).json({error:"some thing wrong in the server"})
+        res.status(500).json({error:"some thing wrong in the server"})
     }
 })
 //put alarm
@@ -71,7 +80,7 @@ router.put("/put-alarm", async (req: Request, res: Response) => {
         await type.save();
         return res.json(type.notification);
     } catch {
-        return res.status(505).json({ error: "some thing wrong in the server" });
+        return res.status(500).json({ error: "some thing wrong in the server" });
     }
 })
 //delete alarm
@@ -92,7 +101,7 @@ try{
         return res.json(type.notification);
 }
 catch{
-        return res.status(505).json({ error: "some thing wrong in the server" });
+        return res.status(500).json({ error: "some thing wrong in the server" });
 }
 })
 export default router;

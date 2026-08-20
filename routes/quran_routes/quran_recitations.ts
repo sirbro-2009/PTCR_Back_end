@@ -61,7 +61,7 @@ router.get("/reciations_And_narrative", async (req: Request, res: Response) => {
       res.status(404).json({ error: true });
     }
   } catch {
-    res.status(505).json({ error: true });
+    res.status(500).json({ error: true });
   }
 });
 /*quran_rections */
@@ -128,7 +128,7 @@ main();
     }
   } catch (e) {
     console.log(e)
-    res.status(505).json({ error: true });
+    res.status(500).json({ error: true });
   }
 });
 /**add audio to User account */
@@ -156,7 +156,7 @@ router.post("/add_audio", async (req: Request, res: Response) => {
       }
     }
   } catch {
-    res.status(505).json({ error: true });
+    res.status(500).json({ error: true });
   }
 });
 interface sendedData {
@@ -188,7 +188,7 @@ router.delete("/delete_audio", async (req: Request, res: Response) => {
       }
     }
   } catch {
-    res.status(505).json({ error: true });
+    res.status(500).json({ error: true });
   }
 });
 router.get("/get_saved", async (req: Request, res: Response) => {
@@ -205,7 +205,7 @@ router.get("/get_saved", async (req: Request, res: Response) => {
     }
   } catch {
     
-    res.status(505).json({ error: true });
+    res.status(500).json({ error: true });
   }
 });
 export default router;

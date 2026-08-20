@@ -22,7 +22,7 @@ try{
     return res.json(response)
 }
 catch{
-res.status(505).json({error:true})
+res.status(500).json({error:true})
 }
 })
 export default router
