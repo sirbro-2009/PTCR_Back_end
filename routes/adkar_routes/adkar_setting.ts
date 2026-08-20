@@ -31,11 +31,19 @@ router.put("/set-active",async(req:Request,res:Response)=>{
 
     if (!type ) return res.status(404).json({error:"user not found"});
     try{
-        const {active,subscription} = req.body as {active:boolean,subscription?:any}
+        const {active,subscription} = req.body //as {active:boolean,subscription?:any}
         if (!type.notification || typeof token !== 'string') return null
         
         type.notification.isActivated = active;
-        type.notification.subscription =  {...subscription,userId:jwt.decode(token)}
+        type.notification.subscription =  subscription
+        const decodedUser = jwt.decode(token);
+        const userId = typeof decodedUser === "string"
+            ? decodedUser
+            : decodedUser && typeof decodedUser === "object"
+                ? String((decodedUser as { _id?: string; id?: string; userId?: string })._id ?? (decodedUser as { _id?: string; id?: string; userId?: string }).id ?? (decodedUser as { _id?: string; id?: string; userId?: string }).userId ?? "")
+                : "";
+        if (!userId) return res.status(404).json({error:"user not found"});
+        if (type.notification.subscription) type.notification.subscription.userId = userId;
         await type.save()
         res.json(type.notification);
     }
