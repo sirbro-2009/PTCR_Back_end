@@ -16,9 +16,12 @@ const Mosque = new Schema({
     subscription: {
       userId: String,
       endpoint: String,
+      expirationTime:Number,
+      key:{
       p256dh: String,
-      auth: String,
-      timeZone: String,
+      auth: String,        
+      },
+      timeZone:String
     },
   },
   MosqueProps: {

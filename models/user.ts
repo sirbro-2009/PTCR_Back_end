@@ -18,8 +18,11 @@ const userSchema = new Schema({
     subscription: {
       userId: String,
       endpoint: String,
+      expirationTime:Number,
+      key:{
       p256dh: String,
-      auth: String,
+      auth: String,        
+      },
       timeZone:String
     },
   },

@@ -35,7 +35,7 @@ router.put("/set-active",async(req:Request,res:Response)=>{
         if (!type.notification || typeof token !== 'string') return null
         
         type.notification.isActivated = active;
-        type.notification.subscription =  subscription
+        //type.notification.subscription =  subscription
         const decodedUser = jwt.decode(token);
         const userId = typeof decodedUser === "string"
             ? decodedUser
@@ -43,7 +43,7 @@ router.put("/set-active",async(req:Request,res:Response)=>{
                 ? String((decodedUser as { _id?: string; id?: string; userId?: string })._id ?? (decodedUser as { _id?: string; id?: string; userId?: string }).id ?? (decodedUser as { _id?: string; id?: string; userId?: string }).userId ?? "")
                 : "";
         if (!userId) return res.status(404).json({error:"user not found"});
-        if (type.notification.subscription) type.notification.subscription.userId = userId;
+        if (type.notification.subscription) type.notification.subscription = {...subscription,userId};
         await type.save()
         res.json(type.notification);
     }
