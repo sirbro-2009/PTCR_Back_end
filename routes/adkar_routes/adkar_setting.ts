@@ -42,7 +42,7 @@ router.put("/set-active",async(req:Request,res:Response)=>{
             : decodedUser && typeof decodedUser === "object"
                 ? String((decodedUser as { _id?: string; id?: string; userId?: string })._id ?? (decodedUser as { _id?: string; id?: string; userId?: string }).id ?? (decodedUser as { _id?: string; id?: string; userId?: string }).userId ?? "")
                 : "";
-        if (!userId) return res.status(404).json({error:"user not found"});
+        if (!userId || Object.keys(subscription).length === 0) return res.status(404).json({error:"user not found"});
         if (type.notification.subscription) type.notification.subscription = {...subscription,userId};
         await type.save()
         res.json(type.notification);
