@@ -19,11 +19,11 @@ const userSchema = new Schema({
       userId: String,
       endpoint: String,
       expirationTime:Number,
-      key:{
+      keys:{
       p256dh: String,
       auth: String,        
       },
-      timeZone:String
+      timezone:String
     },
   },
   verifyCode: {
