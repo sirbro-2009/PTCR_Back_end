@@ -2,8 +2,8 @@
 import webpush from 'web-push';
 import 'dotenv/config';
 
-const Public_Key = process.env.VAPID_PUBLIC_KEY;
-const Private_Key = process.env.VAPID_PRIVATE_KEY;
+const Public_Key = process.env.Public_Key;
+const Private_Key = process.env.Private_Key;
 
 if (!Public_Key || !Private_Key) {
   throw new Error('VAPID keys غير موجودة بملف .env');
