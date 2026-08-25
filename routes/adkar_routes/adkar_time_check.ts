@@ -168,6 +168,7 @@ export async function notification_cron(Model: typeof User | typeof Mosque) {
     for (const ele of e.notification.alaramArray) {
       const timezone = e.notification?.subscription?.timezone;
       const subscription = e.notification?.subscription;
+      const notificationLanguage = e.notification?.subscription?.lang ?? "en";
 
       if (
         timezone &&
@@ -177,8 +178,6 @@ export async function notification_cron(Model: typeof User | typeof Mosque) {
         typeof ele.time === "string" &&
         NotificationCheck(timezone, ele.time)
       ) {
-        const notificationLanguage = e.notification?.subscription?.lang ?? "en";
-
         const result = await sendPushToUser(
           {
             endpoint: subscription.endpoint,
@@ -189,7 +188,8 @@ export async function notification_cron(Model: typeof User | typeof Mosque) {
           },
           {
             title: notificationLanguage,
-            body: ele.id == null ? "" : (adhkarKeys[ele.id] ?? ""),
+            body:
+              (ele.id == null ? "" : (adhkarKeys[ele.id] ?? "")),
             url: "/dashboard",
           },
         );
