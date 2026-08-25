@@ -19,6 +19,7 @@ const userSchema = new Schema({
       userId: String,
       endpoint: String,
       expirationTime:Number,
+      lang: String,
       keys:{
       p256dh: String,
       auth: String,        

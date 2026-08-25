@@ -177,6 +177,8 @@ export async function notification_cron(Model: typeof User | typeof Mosque) {
         typeof ele.time === "string" &&
         NotificationCheck(timezone, ele.time)
       ) {
+        const notificationLanguage = e.notification?.subscription?.lang ?? "en";
+
         const result = await sendPushToUser(
           {
             endpoint: subscription.endpoint,
@@ -186,10 +188,8 @@ export async function notification_cron(Model: typeof User | typeof Mosque) {
             },
           },
           {
-            title: "حان وقت الأذكار",
-            body:
-              "اضغط لعرض أذكار اليوم" +
-              (ele.id == null ? "" : (adhkarKeys[ele.id] ?? "")),
+            title: notificationLanguage,
+            body: ele.id == null ? "" : (adhkarKeys[ele.id] ?? ""),
             url: "/dashboard",
           },
         );
