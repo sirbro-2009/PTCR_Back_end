@@ -58,7 +58,7 @@ router.put("/set-active", async (req: Request, res: Response) => {
     await type.save();
     res.json(type.notification);
   } catch (e){
-    res.status(500).json({ error: e});
+    res.status(500).send(e);
   }
 });
 ///post new alarm
