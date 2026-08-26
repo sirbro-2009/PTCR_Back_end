@@ -30,7 +30,7 @@ router.put("/set-active", async (req: Request, res: Response) => {
   const type = (await getUserObject(token, res)).type;
 
   if (!type) return res.status(404).json({ error: "user not found" });
-  try {
+
     const { active, subscription } = req.body; //as {active:boolean,subscription?:any}
     if (!type.notification || typeof token !== "string") return null;
 
@@ -57,9 +57,9 @@ router.put("/set-active", async (req: Request, res: Response) => {
       type.notification.subscription = { ...subscription, userId };
     await type.save();
     res.json(type.notification);
-  } catch (e){
-    res.status(500).send(e);
-  }
+   
+    // res.status(500).json({ error: "some thing wrong in the server" });
+  
 });
 ///post new alarm
 router.post("/add-alarm", async (req: Request, res: Response) => {
