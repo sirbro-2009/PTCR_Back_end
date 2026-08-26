@@ -36,7 +36,7 @@ router.put("/set-active", async (req: Request, res: Response) => {
 
     type.notification.isActivated = active;
     //type.notification.subscription =  subscription
-    if(active){
+    if(active && Object.keys(subscription).length !== 0){
     const decodedUser = jwt.decode(token);
     const userId =
       typeof decodedUser === "string"
