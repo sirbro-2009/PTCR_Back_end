@@ -57,8 +57,8 @@ router.put("/set-active", async (req: Request, res: Response) => {
       type.notification.subscription = { ...subscription, userId };
     await type.save();
     res.json(type.notification);
-  } catch {
-    res.status(500).json({ error: "some thing wrong in the server" });
+  } catch (e){
+    res.status(500).json({ error: e});
   }
 });
 ///post new alarm
