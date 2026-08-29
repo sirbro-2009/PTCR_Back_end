@@ -15,6 +15,8 @@ import tafsir from "./routes/quran_routes/quran_tafsir.js";
 /*Adkar */
 import Adkar from "./routes/adkar_routes/adkar_setting.js";
 import cronRouter from "./routes/adkar_routes/adkar_time_check.js";
+/*Prayer */
+import Prayer_data from "./routes/prayer_routers/prayer_data.js";
 
 const app = express();
 app.use(express.json());
@@ -69,6 +71,8 @@ app.use("/quran", tafsir);
 /*Adkar route */
 app.use("/adkar", Adkar);
 app.use("/adkar", cronRouter);
+/*Prayer route */
+app.use("/prayer", Prayer_data);
 
 if (process.env.NODE_ENV !== "production") {
   const port = process.env.PORT || 3000;
