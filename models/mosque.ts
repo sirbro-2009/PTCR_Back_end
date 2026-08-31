@@ -41,10 +41,11 @@ const Mosque = new Schema({
     },
   },
   SavedQuran: [{ surah: Number, reader: Number }],
-  prayer_data:{
-  method:String,
-  tune:[String],
-  school:String
+  prayer_data: {
+    method: String,
+    tune: [String],
+    school: String,
+    is_12: Boolean,
   },
   isVerified: Boolean,
   verifyCode: {

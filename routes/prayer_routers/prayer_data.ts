@@ -109,12 +109,12 @@ router.post("/add_props", async (req: Request, res: Response) => {
       await getUserObject(req.headers.authorization?.split(" ")[1], res)
     ).type;
     if (user) {
-      const { method, school, tune } = req.body;
-      const all_Props = [method, school, tune];
-      const props_name = ["method", "school", "tune"] as const;
+      const { method, school, tune ,is_12} = req.body;
+      const all_Props = [method, school, tune,is_12];
+      const props_name:string[] = ["method", "school", "tune","is_12"]   
       for (const [i, e] of all_Props.entries()) {
-        if (e && user.prayer_data) {
-          user.prayer_data[props_name[i] as keyof typeof user.prayer_data] = e;
+        if (e && user.prayer_data && props_name[i]) {
+          (user.prayer_data  as any)[props_name[i] as keyof typeof user.prayer_data] = e;
         }
       }
       await user.save();

@@ -1,5 +1,5 @@
-import mongoose from 'mongoose'
-const Schema  = mongoose.Schema 
+import mongoose from "mongoose";
+const Schema = mongoose.Schema;
 const userSchema = new Schema({
   email: String,
   fullName: String,
@@ -18,24 +18,25 @@ const userSchema = new Schema({
     subscription: {
       userId: String,
       endpoint: String,
-      expirationTime:Number,
+      expirationTime: Number,
       lang: String,
-      keys:{
-      p256dh: String,
-      auth: String,        
+      keys: {
+        p256dh: String,
+        auth: String,
       },
-      timezone:String
+      timezone: String,
     },
   },
-  prayer_data:{
-  method:String,
-  tune:[String],
-  school:String
+  prayer_data: {
+    method: String,
+    tune: [String],
+    school: String,
+    is_12: Boolean,
   },
   verifyCode: {
     Number: Number,
     exp: Number,
   },
 });
-const User = mongoose.model("User",userSchema)
-export default  User
+const User = mongoose.model("User", userSchema);
+export default User;
