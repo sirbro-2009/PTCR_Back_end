@@ -91,6 +91,18 @@ router.get("/prayer_time", async (req: Request, res: Response) => {
     res.status(500).send({ error });
   }
 });
+router.get("/get_props" ,async (req: Request, res: Response) => {
+  try {
+    const user = (
+      await getUserObject(req.headers.authorization?.split(" ")[1], res)
+    ).type;
+    if (user) {
+      res.json(user.prayer_data);
+    }
+  } catch (error) {
+    res.status(500).send({ error });
+  }
+})
 router.post("/add_props", async (req: Request, res: Response) => {
   try {
     const user = (
