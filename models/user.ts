@@ -27,6 +27,11 @@ const userSchema = new Schema({
       timezone:String
     },
   },
+  prayer_data:{
+  method:String,
+  tune:[String],
+  school:String
+  },
   verifyCode: {
     Number: Number,
     exp: Number,

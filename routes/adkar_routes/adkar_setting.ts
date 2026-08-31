@@ -6,7 +6,7 @@ import Mosque from "../../models/mosque.js";
 import jwt from "jsonwebtoken";
 
 ///
-async function getUserObject(token: string | undefined, res: Response) {
+export async function getUserObject(token: string | undefined, res: Response) {
   if (!token) res.status(404).json({ error: "user not found" });
   const isUser = await User.findOne({ "Token.token": token });
   const isMosque = await Mosque.findOne({ "Token.token": token });

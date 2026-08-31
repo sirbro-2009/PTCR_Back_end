@@ -16,13 +16,13 @@ const Mosque = new Schema({
     subscription: {
       userId: String,
       endpoint: String,
-      expirationTime:Number,
+      expirationTime: Number,
       lang: String,
-      keys:{
-      p256dh: String,
-      auth: String,        
+      keys: {
+        p256dh: String,
+        auth: String,
       },
-      timezone:String
+      timezone: String,
     },
   },
   MosqueProps: {
@@ -41,6 +41,11 @@ const Mosque = new Schema({
     },
   },
   SavedQuran: [{ surah: Number, reader: Number }],
+  prayer_data:{
+  method:String,
+  tune:[String],
+  school:String
+  },
   isVerified: Boolean,
   verifyCode: {
     Number: Number,
