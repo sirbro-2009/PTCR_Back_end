@@ -113,7 +113,7 @@ router.post("/add_props", async (req: Request, res: Response) => {
       const all_Props = [method, school, tune,is_12];
       const props_name:string[] = ["method", "school", "tune","is_12"]   
       for (const [i, e] of all_Props.entries()) {
-        if (e && user.prayer_data && props_name[i]) {
+        if (e !== undefined && props_name[i]) {
           (user.prayer_data  as any)[props_name[i] as keyof typeof user.prayer_data] = e;
         }
       }
