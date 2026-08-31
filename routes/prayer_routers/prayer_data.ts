@@ -63,7 +63,7 @@ router.get("/prayer_time", async (req: Request, res: Response) => {
       const request = await fetch(
         `https://api.aladhan.com/v1/timings/${full_date}?
         latitude=${latitude}&longitude=${longitude}&method=${method??'3'}&school=${school??''}
-        &tune=${tune?tune.join(""):`0,0,0,0,0,${country_code === "dz"?'3':'0'},0,0,0`}`,
+        &tune=${tune?tune.map((e)=>e === "NaN"?'0':e).join(","):`0,0,0,0,0,${country_code === "dz"?'3':'0'},0,0,0`}`,
       );
       const response = (await request.json()) as adhan_response;
       const { Fajr, Sunrise, Dhuhr, Asr, Maghrib, Isha, Midnight } =
