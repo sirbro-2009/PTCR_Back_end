@@ -33,6 +33,7 @@ router.post("/set_active", async (req: Request, res: Response) => {
         mosqueProps.MosuqeId = new_mosque_id
       }
       mosuqe.MosqueProps = mosqueProps;
+      await mosuqe.save()
       res.status(200).json(mosuqe.MosqueProps)
     }
 
