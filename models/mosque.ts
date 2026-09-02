@@ -33,7 +33,7 @@ const Mosque = new Schema({
     Lat: Number,
     Lon: Number,
     Region:String,
-    MosuqeId:Number,
+    MosqueId:Number,
     MosqueIcama: {
       Fajr: String,
       Dhuhr: String,

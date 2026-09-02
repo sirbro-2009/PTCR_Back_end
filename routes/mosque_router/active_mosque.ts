@@ -10,7 +10,7 @@ interface reqest_data {
       Region:string;
       Country: string;
       City: string;
-      MosuqeId?:number
+      MosqueId?:number
     }
 router.post("/set_active", async (req: Request, res: Response) => {
 
@@ -29,8 +29,8 @@ router.post("/set_active", async (req: Request, res: Response) => {
         City,
         Region
       };
-      if(typeof mosuqe.MosqueProps?.MosuqeId !== 'number'){
-        mosqueProps.MosuqeId = new_mosque_id
+      if(typeof mosuqe.MosqueProps?.MosqueId !== 'number'){
+        mosqueProps.MosqueId = new_mosque_id
       }
       mosuqe.MosqueProps = mosqueProps;
       await mosuqe.save()
