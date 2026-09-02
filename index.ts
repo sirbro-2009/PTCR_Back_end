@@ -75,7 +75,7 @@ app.use("/adkar", cronRouter);
 /*Prayer route */
 app.use("/prayer", Prayer_data);
 /*Mosuqe routes */
-app.use("/mosuqe", active_mosque);
+app.use("/mosque", active_mosque);
 
 if (process.env.NODE_ENV !== "production") {
   const port = process.env.PORT || 3000;
