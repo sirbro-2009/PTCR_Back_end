@@ -21,7 +21,7 @@ router.get("/get_mosque_data",async (req: Request, res: Response) => {
     res.status(200).json({...MosqueProps,...prayer_data})
     }
     else{
-       res.status(404).send({ error: "unvalid mosque token" });
+       res.status(404).send({ error: "unvalid mosque token" ,token,mosuqe});
     }
     }
     catch(e){
