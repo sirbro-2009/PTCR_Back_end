@@ -15,7 +15,14 @@ interface reqest_data {
 router.get("/get_mosque_data",async (req: Request, res: Response) => {
     try{      
     const token = req.headers.authorization?.split(" ")[1];
-    const mosuqe = await Mosque.findOne({ "Token.token": token });
+    const id = req.query.id
+    let mosuqe
+    if(token){
+     mosuqe = await Mosque.findOne({ "Token.token": token });
+    }
+    if(!Number.isNaN(id)){
+      mosuqe = await Mosque.findOne({ "MosqueProps.MosqueId": Number(id) });
+    }
     if (!mosuqe) return res.status(404).send({ error: "unvalid mosque token" });
     const {MosqueProps,prayer_data} = mosuqe
     res.status(200).json({...MosqueProps,...prayer_data})
@@ -39,11 +46,8 @@ router.post("/set_active", async (req: Request, res: Response) => {
         Country,
         City,
         Region
-      };
-      
-        mosqueProps.MosqueId = new_mosque_id
-      
-      mosuqe.MosqueProps = mosqueProps;
+      };      
+      mosuqe.MosqueProps = {...mosqueProps,MosqueId:mosuqe.MosqueProps?.MosqueId??new_mosque_id};
       await mosuqe.save()
       return res.status(200).json(mosuqe.MosqueProps)
     }
