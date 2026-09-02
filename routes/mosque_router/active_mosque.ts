@@ -7,6 +7,7 @@ interface reqest_data {
       Lat: number;
       Lon: number;
       MosqueName: string;
+      Region:string;
       Country: string;
       City: string;
       MosuqeId?:number
@@ -15,7 +16,7 @@ router.post("/set_active", async (req: Request, res: Response) => {
 
   try {
     const new_mosque_id = crypto.randomInt(100000, 999999);
-    const { Lon, Lat, MosqueName, Country, City } = req.body as reqest_data
+    const { Lon, Lat, MosqueName, Country,Region, City } = req.body as reqest_data
     const token = req.headers.authorization?.split(" ")[1];
     const mosuqe = await Mosque.findOne({ "Token.token": token });
     if (!mosuqe) return res.status(404).send({ error: "unvalid mosque token" });
@@ -26,7 +27,7 @@ router.post("/set_active", async (req: Request, res: Response) => {
         MosqueName,
         Country,
         City,
-        
+        Region
       };
       if(typeof mosuqe.MosqueProps?.MosuqeId !== 'number'){
         mosqueProps.MosuqeId = new_mosque_id
