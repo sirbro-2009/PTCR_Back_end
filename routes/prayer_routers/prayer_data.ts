@@ -23,6 +23,17 @@ interface adhan_response {
     };
   };
 }
+router.get("/get_hidjri_date_algeria",async(req: Request, res: Response)=>{
+try{
+        const request4 = await fetch(
+          `https://marw.gov.dz/rest/ubiko_rest/get_hijri_date?_format=json&time=${Date.now()}`,
+        );
+        res.status(200).json(await request4.json())
+}
+catch(error){
+  res.status(500).json({error})
+}
+})
 router.get("/prayer_time", async (req: Request, res: Response) => {
   try {
     ////get user data
