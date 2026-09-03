@@ -20,9 +20,9 @@ router.get("/get_mosque_data",async (req: Request, res: Response) => {
     if(token){
      mosuqe = await Mosque.findOne({ "Token.token": token });
     }
-    if(!Number.isNaN(id)){
-      mosuqe = await Mosque.findOne({ "MosqueProps.MosqueId": Number(id) });
-    }
+    //if(!Number.isNaN(id)){
+    //  mosuqe = await Mosque.findOne({ "MosqueProps.MosqueId": Number(id) });
+    //}
     if (!mosuqe) return res.status(404).send({ error: "unvalid mosque token" });
     const {MosqueProps,prayer_data} = mosuqe
     res.status(200).json({...MosqueProps,...prayer_data})
