@@ -15,7 +15,6 @@ interface reqest_data {
 router.get("/get_mosque_data",async (req: Request, res: Response) => {
     try{      
     const token = req.headers.authorization?.split(" ")[1];
-    const id = req.query.id
     let mosuqe
     if(token){
      mosuqe = await Mosque.findOne({ "Token.token": token });
@@ -26,7 +25,20 @@ router.get("/get_mosque_data",async (req: Request, res: Response) => {
     if (!mosuqe) return res.status(404).send({ error: "unvalid mosque token" });
     const {MosqueProps,prayer_data} = mosuqe
     res.status(200).json({...MosqueProps,...prayer_data})
+    }
+    catch(e){
+        res.status(500).json({error:e})
+    }
+})
+router.get("/get_mosque_data_by_id",async (req: Request, res: Response)=>{
+    try{      
+        const id = req.query.id
 
+    if(!Number.isNaN(id))return res.status(404).send({ error: "unvalid mosque id" })
+    const mosuqe = await Mosque.findOne({  "MosqueProps.MosqueId": Number(id)});
+    if (!mosuqe) return res.status(404).send({ error: "unvalid mosque id" });
+    const {MosqueProps,prayer_data} = mosuqe
+    res.status(200).json({...MosqueProps,...prayer_data})
     }
     catch(e){
         res.status(500).json({error:e})
