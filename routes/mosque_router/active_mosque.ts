@@ -52,11 +52,9 @@ if(condetion1 && !condetion2 && !condetion3){
   const mosques = await Mosque.find({
     "MosqueProps.MosqueName": { $regex: new RegExp(name, "i") }
   }).lean()
-res.status(404).json(mosques)
+res.status(404).json(mosques.map((e)=> e.MosqueProps))
 }
-else if(!condetion1 && condetion2 && condetion3){
 
-}
 }
 catch(err){
 res.status(500).json({err})
