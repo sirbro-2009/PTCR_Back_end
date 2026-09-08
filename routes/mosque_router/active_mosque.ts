@@ -42,6 +42,26 @@ router.get("/get_mosque_data_by_id",async (req: Request, res: Response)=>{
         res.status(500).json({error:e})
     }
 })
+router.get("/mosques_search",async (req: Request, res: Response)=>{
+try{
+const {name,Lan,Log} = req.query
+const condetion1 = typeof name === 'string'
+const condetion2 = typeof Lan === 'string'
+const condetion3 = typeof Log === 'string'
+if(condetion1 && !condetion2 && !condetion3){
+  const mosques = await Mosque.find({
+    "MosqueProps.MosqueName": { $regex: new RegExp(name, "i") }
+  }).lean()
+res.status(404).json(mosques)
+}
+else if(!condetion1 && condetion2 && condetion3){
+
+}
+}
+catch(err){
+res.status(500).json({err})
+}
+})
 router.post("/set_active", async (req: Request, res: Response) => {
   try {
     const new_mosque_id = crypto.randomInt(100000, 999999);
