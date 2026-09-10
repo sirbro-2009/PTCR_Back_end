@@ -37,7 +37,7 @@ const Mosque = new Schema({
     MosqueIcama: {
       Fajr: String,
       Dhuhr: String,
-      asr: String,
+      Asr: String,
       Maghrib: String,
       Isha: String,
     },
