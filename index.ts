@@ -18,6 +18,7 @@ import cronRouter from "./routes/adkar_routes/adkar_time_check.js";
 /*Prayer */
 import Prayer_data from "./routes/prayer_routers/prayer_data.js";
 import active_mosque from "./routes/mosque_router/active_mosque.js";
+import editProps from "./routes/mosque_router/edit_mosque_data.js";
 
 const app = express();
 app.use(express.json());
@@ -76,7 +77,7 @@ app.use("/adkar", cronRouter);
 app.use("/prayer", Prayer_data);
 /*Mosuqe routes */
 app.use("/mosque", active_mosque);
-
+app.use("/mosque",editProps);
 if (process.env.NODE_ENV !== "production") {
   const port = process.env.PORT || 3000;
   app.listen(port, () => console.log(`Example app listening on port ${port}!`));
