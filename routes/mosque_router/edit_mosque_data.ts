@@ -39,7 +39,7 @@ try{
     }
     if (!mosuqe || !type ||!link) return res.status(404).send({ error: "unvalid data" });
     if(type==='0' && mosuqe.MosqueProps){
-    mosuqe.MosqueProps.MosqueImg = type 
+    mosuqe.MosqueProps.MosqueImg = link 
     await mosuqe.save()
     res.status(200).json(mosuqe.MosqueProps)
     }
