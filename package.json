@@ -42,7 +42,9 @@
   },
   "dependencies": {
     "@types/cors": "^2.8.19",
+    "@types/tz-lookup": "^6.1.2",
     "express": "^5.2.1",
+    "tz-lookup": "^6.1.25",
     "web-push": "^3.6.7"
   }
 }

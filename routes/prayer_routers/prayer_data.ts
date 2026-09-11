@@ -4,6 +4,8 @@ import type { Request, Response } from "express";
 import User from "../../models/user.js";
 import Mosque from "../../models/mosque.js";
 import jwt from "jsonwebtoken";
+import tzlookup from "tz-lookup";
+
 import { getUserObject } from "../adkar_routes/adkar_setting.js";
 interface adhan_response {
   data: {
@@ -23,44 +25,31 @@ interface adhan_response {
     };
   };
 }
-router.get("/get_hidjri_date_algeria",async(req: Request, res: Response)=>{
-try{
-        const request4 = await fetch(
-          `https://marw.gov.dz/rest/ubiko_rest/get_hijri_date?_format=json&time=${Date.now()}`,
-        );
-        res.status(200).json(await request4.json())
-}
-catch(error){
-  res.status(500).json({error})
-}
+router.get("/get_hidjri_date_algeria", async (req: Request, res: Response) => {
+  try {
+    const request4 = await fetch(
+      `https://marw.gov.dz/rest/ubiko_rest/get_hijri_date?_format=json&time=${Date.now()}`,
+    );
+    res.status(200).json(await request4.json())
+  }
+  catch (error) {
+    res.status(500).json({ error })
+  }
 })
+const editZero = (number: number) => {
+  return number >= 10 ? number : "0" + number
+}
 router.get("/prayer_time", async (req: Request, res: Response) => {
   try {
     ////get user data
     const { longitude, latitude } = req.query;
 
-    let theDate = new Date(Date.now());
-    let full_date =
-      theDate.getDate() +
-      "-" +
-      (theDate.getMonth() + 1) +
-      "-" +
-      theDate.getFullYear();
-    setInterval(() => {
-      theDate = new Date(Date.now());
-      full_date =
-        theDate.getDate() +
-        "-" +
-        (theDate.getMonth() + 1) +
-        "-" +
-        theDate.getFullYear();
-    }, 1000);
-
+    const theDate = new Date(Date.now());
     const user = (
       await getUserObject(req.headers.authorization?.split(" ")[1], res)
     ).type;
     if (user) {
-      const { school, tune, method } = user.prayer_data as { school:string, tune:string[], method:string }
+      const { school, tune, method } = user.prayer_data as { school: string, tune: string[], method: string }
       ///get loacation data
       const request2 = await fetch(
         `https://us1.locationiq.com/v1/reverse.php?key=${process.env.country_api_key}&lat=${latitude}&lon=${longitude}&format=json`,
@@ -70,11 +59,21 @@ router.get("/prayer_time", async (req: Request, res: Response) => {
       };
       const { country_code } = response2.address;
       ///fetch prayer_time
+      ///get date
+      const timeZone = tzlookup(Number(latitude), Number(longitude));
+      const formatter = new Intl.DateTimeFormat("en-CA", {
+        timeZone,
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+      });
 
+      // en-CA يرجع بصيغة YYYY-MM-DD، نبدلها لصيغتك DD-MM-YYYY
+      const [year, month, day] = formatter.format(theDate).split("-");
+      const full_date = `${day}-${month}-${year}`;
+      ///
       const request = await fetch(
-        `https://api.aladhan.com/v1/timings/${full_date}?
-        latitude=${latitude}&longitude=${longitude}&method=${method??'3'}&school=${school??''}
-        &tune=${tune?tune.map((e)=>e === "NaN"?'0':e).join(","):`0,0,0,0,0,${country_code === "dz"?'3':'0'},0,0,0`}`,
+        `https://api.aladhan.com/v1/timings/${full_date}? latitude=${latitude}&longitude=${longitude}&method=${method ?? '3'}&school=${school ?? ''}&tune=${tune ? tune.map((e) => e === "NaN" ? '0' : e).join(",") : `0,0,0,0,0,${country_code === "dz" ? '3' : '0'},0,0,0`}`,
       );
       const response = (await request.json()) as adhan_response;
       const { Fajr, Sunrise, Dhuhr, Asr, Maghrib, Isha, Midnight } =
@@ -102,7 +101,7 @@ router.get("/prayer_time", async (req: Request, res: Response) => {
     res.status(500).send({ error });
   }
 });
-router.get("/get_props" ,async (req: Request, res: Response) => {
+router.get("/get_props", async (req: Request, res: Response) => {
   try {
     const user = (
       await getUserObject(req.headers.authorization?.split(" ")[1], res)
@@ -120,12 +119,12 @@ router.post("/add_props", async (req: Request, res: Response) => {
       await getUserObject(req.headers.authorization?.split(" ")[1], res)
     ).type;
     if (user) {
-      const { method, school, tune ,is_12} = req.body;
-      const all_Props = [method, school, tune,is_12];
-      const props_name:string[] = ["method", "school", "tune","is_12"]   
+      const { method, school, tune, is_12 } = req.body;
+      const all_Props = [method, school, tune, is_12];
+      const props_name: string[] = ["method", "school", "tune", "is_12"]
       for (const [i, e] of all_Props.entries()) {
         if (e !== undefined && props_name[i]) {
-          (user.prayer_data  as any)[props_name[i] as keyof typeof user.prayer_data] = e;
+          (user.prayer_data as any)[props_name[i] as keyof typeof user.prayer_data] = e;
         }
       }
       await user.save();
