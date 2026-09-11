@@ -29,5 +29,24 @@ catch(err){
     res.status(500).json({err})
 }
 })
+router.post("/set_bg", async (req: Request, res: Response) =>{
+try{
+    const token = req.headers.authorization?.split(" ")[1];
+    const {type,link} = req.body
+    let mosuqe;
+    if (token) {
+      mosuqe = await Mosque.findOne({ "Token.token": token });
+    }
+    if (!mosuqe || !type ||!link) return res.status(404).send({ error: "unvalid data" });
+    if(type==='0' && mosuqe.MosqueProps){
+    mosuqe.MosqueProps.MosqueImg = type 
+    await mosuqe.save()
+    res.status(200).json(mosuqe.MosqueProps)
+    }
 
+}
+catch(err){
+    res.status(500).json({err})
+}
+})
 export default router

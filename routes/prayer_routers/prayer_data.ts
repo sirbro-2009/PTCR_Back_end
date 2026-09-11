@@ -68,7 +68,6 @@ router.get("/prayer_time", async (req: Request, res: Response) => {
         year: "numeric",
       });
 
-      // en-CA يرجع بصيغة YYYY-MM-DD، نبدلها لصيغتك DD-MM-YYYY
       const [year, month, day] = formatter.format(theDate).split("-");
       const full_date = `${day}-${month}-${year}`;
       ///
