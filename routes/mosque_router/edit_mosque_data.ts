@@ -52,6 +52,7 @@ router.post(
         const bg_url = req.file.path;
         mosque.MosqueProps.MosqueImg = bg_url;
         await mosque.save();
+        res.status(200).json(mosque.MosqueProps);
       }
     } catch (err) {
       res.status(500).json({ err });
