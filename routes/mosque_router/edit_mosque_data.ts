@@ -30,25 +30,38 @@ router.post("/edit_icama_durations", async (req: Request, res: Response) => {
     res.status(500).json({ err });
   }
 });
+router.post("/set_bg", async (req: Request, res: Response) => {
+  try {
+    const token = req.headers.authorization?.split(" ")[1];
+    const { type, link } = req.body;
+    let mosque;
+    if (token) {
+      mosque = await Mosque.findOne({ "Token.token": token });
+    }
+    if (!mosque || !type || !link)
+      return res.status(404).send({ error: "unvalid data" });
+    if (type === "0" && mosque.MosqueProps) {
+      mosque.MosqueProps.MosqueImg = link;
+      await mosque.save();
+      res.status(200).json(mosque.MosqueProps);
+    }
+  } catch (err) {
+    res.status(500).json({ err });
+  }
+});
 router.post(
-  "/set_bg",
+  "/set_bg_img",
   upload.single("bg_img"),
   async (req: Request, res: Response) => {
     try {
       const token = req.headers.authorization?.split(" ")[1];
-      const { type, link } = req.body;
       let mosque;
       if (token) {
         mosque = await Mosque.findOne({ "Token.token": token });
       }
-      if (!mosque  || !link )
+      if (!mosque || !req.file)
         return res.status(404).send({ error: "unvalid data" });
-      if (type === "0" && mosque.MosqueProps && !req.file) {
-        mosque.MosqueProps.MosqueImg = link;
-        await mosque.save();
-        res.status(200).json(mosque.MosqueProps);
-      }
-      if (!type && req.file && mosque.MosqueProps) {
+      if (mosque.MosqueProps) {
         const bg_url = req.file.path;
         mosque.MosqueProps.MosqueImg = bg_url;
         await mosque.save();
