@@ -41,7 +41,7 @@ router.post(
       if (token) {
         mosque = await Mosque.findOne({ "Token.token": token });
       }
-      if (!mosque  || !link ||(!type && !req.file))
+      if (!mosque  || !link )
         return res.status(404).send({ error: "unvalid data" });
       if (type === "0" && mosque.MosqueProps && !req.file) {
         mosque.MosqueProps.MosqueImg = link;
