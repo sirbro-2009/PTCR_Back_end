@@ -41,14 +41,14 @@ router.post(
       if (token) {
         mosque = await Mosque.findOne({ "Token.token": token });
       }
-      if (!mosque || !type || !link)
+      if (!mosque  || !link ||(!type && !req.file))
         return res.status(404).send({ error: "unvalid data" });
       if (type === "0" && mosque.MosqueProps && !req.file) {
         mosque.MosqueProps.MosqueImg = link;
         await mosque.save();
         res.status(200).json(mosque.MosqueProps);
       }
-      if (type === "1" && req.file && mosque.MosqueProps) {
+      if (!type && req.file && mosque.MosqueProps) {
         const bg_url = req.file.path;
         mosque.MosqueProps.MosqueImg = bg_url;
         await mosque.save();
